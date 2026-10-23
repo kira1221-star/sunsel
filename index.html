@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="Sunsel Pharma PLC is an Ethiopia-based pharmaceutical and medical-equipment importing and wholesale business in Addis Ababa.">
+  <title>Sunsel Pharma PLC | Pharmaceutical & Medical Supply</title>
+
+  <!-- Temporary text-based monogram favicon; not the company's official logo. -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23102b46'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white'%3ESP%3C/text%3E%3C/svg%3E"
+  >
+
+  <style>
+    :root {
+      --navy: #102b46;
+      --navy-light: #1a3c5b;
+      --teal: #147d78;
+      --teal-dark: #0d625e;
+      --ink: #23364a;
+      --muted: #647487;
+      --line: #dfe6eb;
+      --paper: #ffffff;
+      --wash: #f4f7f8;
+      --wash-green: #edf5f3;
+      --container: 1160px;
+      --shadow: 0 14px 38px rgba(16, 43, 70, 0.10);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid #38aaa1;
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      z-index: 1000;
+      left: 16px;
+      top: -60px;
+      padding: 10px 14px;
+      color: white;
+      background: var(--navy);
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(223, 230, 235, 0.9);
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-wrap {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #d5e3e2;
+      border-radius: 7px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-copy {
+      display: grid;
+      line-height: 1.2;
+    }
+
+    .brand-copy strong {
+      font-size: 15px;
+      letter-spacing: 0.035em;
+    }
+
+    .brand-copy span {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #33485c;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      padding: 11px 16px;
+      border-radius: 5px;
+      color: white !important;
+      background: var(--navy);
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      color: var(--navy);
+      background: white;
+      cursor: pointer;
+    }
+
+    .menu-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #f4f7f8;
+    }
+
+    .hero-grid {
+      min-height: 585px;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: center;
+      gap: 42px;
+      padding-block: 54px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      padding-block: 20px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: var(--teal-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 26px;
+      height: 2px;
+      background: var(--teal);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy);
+      line-height: 1.17;
+    }
+
+    h1 {
+      max-width: 630px;
+      margin-bottom: 21px;
+      font-size: clamp(2.55rem, 5vw, 4.2rem);
+      letter-spacing: -0.055em;
+    }
+
+    .hero-lede {
+      max-width: 570px;
+      margin-bottom: 30px;
+      color: #526579;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      color: white;
+      background: var(--teal);
+    }
+
+    .button-primary:hover {
+      background: var(--teal-dark);
+    }
+
+    .button-secondary {
+      border-color: #bdcbd4;
+      color: var(--navy);
+      background: white;
+    }
+
+    .button-secondary:hover {
+      border-color: var(--navy);
+      background: #f9fbfc;
+    }
+
+    .button svg,
+    .text-link svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      min-height: 430px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 7px;
+      box-shadow: var(--shadow);
+    }
+
+    .image-caption {
+      position: absolute;
+      right: -12px;
+      bottom: 20px;
+      max-width: 265px;
+      padding: 15px 18px;
+      border: 1px solid rgba(223, 230, 235, 0.8);
+      border-radius: 5px;
+      color: var(--navy);
+      background: white;
+      box-shadow: 0 8px 28px rgba(16, 43, 70, 0.12);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .image-caption span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .section {
+      padding-block: 88px;
+    }
+
+    .section-soft {
+      background: var(--wash);
+    }
+
+    .section-heading {
+      max-width: 690px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-heading.center .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 3.6vw, 2.8rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-copy h2 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      letter-spacing: -0.04em;
+    }
+
+    .about-copy p {
+      color: #526579;
+    }
+
+    .about-note {
+      margin-top: 24px;
+      padding: 17px 19px;
+      border-left: 3px solid var(--teal);
+      color: #41576a;
+      background: var(--wash);
+      font-size: 14px;
+    }
+
+    .editable-fields {
+      display: grid;
+      gap: 14px;
+    }
+
+    .editable-field {
+      padding: 19px 20px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: white;
+    }
+
+    .editable-field h3 {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .editable-field p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .field-note {
+      display: block;
+      margin-top: 8px;
+      color: #83909b;
+      font-size: 11px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .service-card {
+      min-height: 195px;
+      padding: 25px 26px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: white;
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .service-card:hover {
+      border-color: #b5d1ce;
+      box-shadow: 0 8px 24px rgba(16, 43, 70, 0.06);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .service-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--teal-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .service-status::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #36a397;
+      content: "";
+    }
+
+    .inquiry-band {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 22px;
+      padding: 21px 24px;
+      border: 1px solid #d7e5e3;
+      border-radius: 5px;
+      background: var(--wash-green);
+    }
+
+    .inquiry-band h3 {
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    .inquiry-band p {
+      margin: 0;
+      color: #526579;
+      font-size: 13px;
+    }
+
+    .inquiry-band .button {
+      flex-shrink: 0;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .catalog-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 264px;
+      padding: 25px 24px 23px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: white;
+    }
+
+    .catalog-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 19px;
+      border-radius: 5px;
+      color: var(--teal-dark);
+      background: #e8f3f1;
+    }
+
+    .catalog-mark svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .catalog-card h3 {
+      margin-bottom: 9px;
+      font-size: 19px;
+    }
+
+    .catalog-card p {
+      margin-bottom: 23px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .catalog-card .button {
+      margin-top: auto;
+      align-self: flex-start;
+      min-height: 42px;
+      padding: 9px 13px;
+      font-size: 13px;
+    }
+
+    .catalog-note {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .principle {
+      padding-top: 19px;
+      border-top: 2px solid #b7d6d2;
+    }
+
+    .principle h3 {
+      margin-bottom: 9px;
+      font-size: 17px;
+    }
+
+    .principle p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .quote-section {
+      background: var(--navy);
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 58px;
+      align-items: start;
+    }
+
+    .quote-copy {
+      position: sticky;
+      top: 110px;
+      color: #d4e0e8;
+    }
+
+    .quote-copy .eyebrow {
+      color: #9cd2cc;
+    }
+
+    .quote-copy h2 {
+      margin-bottom: 16px;
+      color: white;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      letter-spacing: -0.04em;
+    }
+
+    .quote-copy > p {
+      color: #c2d0da;
+    }
+
+    .quote-honesty {
+      margin-top: 27px;
+      padding: 17px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 5px;
+      color: #d6e1e8;
+      font-size: 13px;
+    }
+
+    .quote-honesty strong {
+      display: block;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .quote-form {
+      padding: 27px;
+      border-radius: 6px;
+      background: white;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px 16px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: #30465b;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form-field label .optional {
+      color: #7e8b96;
+      font-weight: 400;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 45px;
+      padding: 10px 12px;
+      border: 1px solid #cbd6dd;
+      border-radius: 4px;
+      color: var(--ink);
+      background: white;
+    }
+
+    .form-field textarea {
+      min-height: 106px;
+      resize: vertical;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #96a2ab;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--teal);
+      outline: 2px solid rgba(20, 125, 120, 0.14);
+    }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .form-hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .form-status {
+      min-height: 24px;
+      margin: 13px 0 0;
+      color: var(--teal-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 46px;
+      align-items: stretch;
+    }
+
+    .contact-details h2 {
+      margin-bottom: 13px;
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      letter-spacing: -0.04em;
+    }
+
+    .contact-details > p {
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 19px;
+      margin: 27px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 13px;
+      align-items: start;
+    }
+
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      color: var(--teal-dark);
+      background: white;
+    }
+
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: #566a7c;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      color: var(--teal-dark);
+      text-decoration: underline;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .map-panel {
+      min-height: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background:
+        linear-gradient(180deg, rgba(16, 43, 70, 0.02) 20%, rgba(16, 43, 70, 0.78) 100%),
+        url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80") center 48% / cover,
+        #dfe8e6;
+      overflow: hidden;
+    }
+
+    .map-card {
+      max-width: 370px;
+      padding: 19px 20px;
+      border-radius: 5px;
+      background: white;
+      box-shadow: 0 8px 26px rgba(16, 43, 70, 0.12);
+    }
+
+    .map-card h3 {
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    .map-card p {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--teal-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      padding-block: 36px;
+      color: #c6d2db;
+      background: #0b2137;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 1fr;
+      gap: 35px;
+      padding-bottom: 28px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 13px;
+      color: white;
+    }
+
+    .footer-brand .brand-mark {
+      border-color: rgba(255, 255, 255, 0.28);
+      color: #a9d7d2;
+    }
+
+    .footer-brand .brand-copy span {
+      color: #aebdc8;
+    }
+
+    .footer-brand p {
+      max-width: 350px;
+      margin-bottom: 0;
+      color: #aebdc8;
+      font-size: 13px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 12px;
+      color: white;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a,
+    .footer-contact a,
+    .footer-contact span {
+      color: #c6d2db;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      display: grid;
+      gap: 7px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: #9dabb6;
+      font-size: 12px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    @media (max-width: 940px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .image-caption {
+        right: -5px;
+      }
+
+      .about-grid {
+        gap: 42px;
+      }
+
+      .quote-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 36px, var(--container));
+      }
+
+      .nav-wrap {
+        min-height: 70px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 17px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+        box-shadow: 0 12px 20px rgba(16, 43, 70, 0.08);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links li {
+        border-bottom: 1px solid #edf1f3;
+      }
+
+      .nav-links li:last-child {
+        padding-top: 12px;
+        border-bottom: 0;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 5px;
+      }
+
+      .nav-links .nav-cta {
+        display: inline-flex;
+        padding: 11px 16px;
+      }
+
+      .hero-grid {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-block: 56px 45px;
+      }
+
+      .hero-copy {
+        padding: 0;
+      }
+
+      .hero-image-wrap {
+        min-height: 300px;
+      }
+
+      .hero-image {
+        height: 320px;
+      }
+
+      .image-caption {
+        right: 12px;
+        bottom: 13px;
+      }
+
+      .section {
+        padding-block: 68px;
+      }
+
+      .about-grid,
+      .quote-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .quote-copy {
+        position: static;
+      }
+
+      .service-grid {
+        gap: 13px;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+      }
+
+      .brand-copy strong {
+        font-size: 13px;
+      }
+
+      .hero-grid {
+        padding-top: 43px;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 12vw, 3.25rem);
+      }
+
+      .hero-lede {
+        font-size: 16px;
+      }
+
+      .button-row .button {
+        flex: 1 1 auto;
+      }
+
+      .hero-image-wrap {
+        min-height: 270px;
+      }
+
+      .hero-image {
+        height: 270px;
+      }
+
+      .image-caption {
+        max-width: 235px;
+        font-size: 12px;
+      }
+
+      .service-grid,
+      .catalog-grid,
+      .principles-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .inquiry-band {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .catalog-card {
+        min-height: 0;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+
+      .quote-form {
+        padding: 20px 17px;
+      }
+
+      .form-submit-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .map-panel {
+        min-height: 320px;
+        padding: 15px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Sunsel Pharma PLC home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span class="brand-copy">
+          <strong>SUNSEL PHARMA PLC</strong>
+          <span>Pharmaceutical supply</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="nav-cta" href="#quotation">Request a Quotation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Pharmaceutical &amp; medical supply · Ethiopia</p>
+          <h1 id="hero-title">Reliable Pharmaceutical &amp; Medical Supply Solutions</h1>
+          <p class="hero-lede">
+            Connecting healthcare providers with pharmaceutical products and medical equipment
+            through dependable supply and professional service.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="#services">
+              Explore Our Services
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#contact">Contact Our Team</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85"
+            alt="Healthcare professionals reviewing information in a bright clinical setting"
+            fetchpriority="high"
+          >
+          <div class="image-caption">
+            Business supply inquiries welcome
+            <span>Contact the team to discuss product information and quotations.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">About Sunsel Pharma</p>
+          <h2 id="about-title">Focused on pharmaceutical and medical-equipment supply</h2>
+          <p>
+            Sunsel Pharma PLC is an Ethiopia-based business in Addis Ababa. Its publicly listed
+            activities include importing and wholesaling medicines and medical equipment.
+          </p>
+          <p>
+            This website provides a point of contact for pharmacies, healthcare organizations,
+            and other businesses seeking product information or a quotation. Product availability
+            and details should be confirmed directly with the company.
+          </p>
+          <div class="about-note">
+            Company background and additional corporate information can be added when confirmed
+            by Sunsel Pharma PLC.
+          </div>
+        </div>
+
+        <div class="editable-fields" aria-label="Management-approved company statements">
+          <div class="editable-field">
+            <h3>Mission</h3>
+            <p id="mission-text">To be confirmed by management.</p>
+            <span class="field-note">
+To improve access to quality pharmaceutical products and medical equipment through reliable supply and professional service in Ethiopia.</span>
+          </div>
+          <div class="editable-field">
+            <h3>Vision</h3>
+            <p id="vision-text">To be confirmed by management.</p>
+            <span class="field-note">
+To become a trusted leader in pharmaceutical and medical equipment supply in Ethiopia.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Supply activities listed for the business</h2>
+          <p>
+            The activities below reflect the business information provided for this website.
+            Ask the company directly about current availability and scope.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Pharmaceutical Product Importation</h3>
+            <p>
+              Importation of medicines is a listed business activity. Product origins, brands,
+              and current availability have not been specified here.
+            </p>
+            <span class="service-status">Listed business activity</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Wholesale Medicine Supply</h3>
+            <p>
+              Wholesale distribution of medicines is listed as part of the company's business
+              activities. Contact the team to ask about a particular requirement.
+            </p>
+            <span class="service-status">Listed business activity</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Medical Equipment Importation</h3>
+            <p>
+              Importation of medical equipment is a listed activity. Specific equipment,
+              manufacturers, and availability require confirmation.
+            </p>
+            <span class="service-status">Listed business activity</span>
+          </article>
+
+          <article class="service-card">
+            <h3>Medical Equipment Wholesale</h3>
+            <p>
+              Wholesale distribution of medical equipment is listed among the company's
+              business activities. Ask about product details and quotations.
+            </p>
+            <span class="service-status">Listed business activity</span>
+          </article>
+        </div>
+
+        <div class="inquiry-band">
+          <div>
+            <h3>Business supply inquiries</h3>
+            <p>
+              Pharmacies, healthcare organizations, and other potential business customers may
+              contact the company to ask about products and quotations.
+            </p>
+          </div>
+          <a class="button button-secondary" href="#quotation">Send an inquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Product categories</p>
+          <h2 id="products-title">Ask us about your supply requirements</h2>
+          <p>
+            These categories organize inquiries only; they do not represent a confirmed product
+            catalogue or current inventory.
+          </p>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <div class="catalog-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M8 3.5h8a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-11a3 3 0 0 1 3-3Z"></path>
+                <path d="M8 12h8M12 8v8"></path>
+              </svg>
+            </div>
+            <h3>Pharmaceutical Products</h3>
+            <p>Contact the company to ask about medicine-related product information and availability.</p>
+            <button class="button button-secondary category-button" type="button" data-category="Pharmaceutical Products">
+              Request Product Information
+            </button>
+          </article>
+
+          <article class="catalog-card">
+            <div class="catalog-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M8 6V4h8v2M9 18v2m6-2v2M8 11h8"></path>
+              </svg>
+            </div>
+            <h3>Medical Equipment</h3>
+            <p>Ask about medical equipment requirements, product details, and quotation requests.</p>
+            <button class="button button-secondary category-button" type="button" data-category="Medical Equipment">
+              Request Product Information
+            </button>
+          </article>
+
+          <article class="catalog-card">
+            <div class="catalog-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M5 7.5 12 4l7 3.5v9L12 20l-7-3.5v-9Z"></path>
+                <path d="m5.5 7.7 6.5 3.4 6.5-3.4M12 11.1V20"></path>
+              </svg>
+            </div>
+            <h3>Medical Supplies</h3>
+            <p>Use this category for general medical-supply inquiries; specific offerings need confirmation.</p>
+            <button class="button button-secondary category-button" type="button" data-category="Medical Supplies">
+              Request Product Information
+            </button>
+          </article>
+        </div>
+        <p class="catalog-note">No specific products, brands, prices, approvals, or stock levels are represented on this page.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="principles-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Working together</p>
+          <h2 id="principles-title">A straightforward approach to business inquiries</h2>
+          <p>Clear communication helps both sides understand a supply request before discussing next steps.</p>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle">
+            <h3>Professional communication</h3>
+            <p>Share clear contact details and the best way to follow up about your request.</p>
+          </article>
+          <article class="principle">
+            <h3>Clear quotation requests</h3>
+            <p>Include the product category, requested item, and quantity when known.</p>
+          </article>
+          <article class="principle">
+            <h3>Responsive inquiries</h3>
+            <p>Use the listed phone or WhatsApp contact to ask the company about your inquiry.</p>
+          </article>
+          <article class="principle">
+            <h3>Organized product information</h3>
+            <p>Describe the item you need so the company can better understand your question.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-section" id="quotation" aria-labelledby="quotation-title">
+      <div class="container quote-grid">
+        <div class="quote-copy">
+          <p class="eyebrow">Request a quotation</p>
+          <h2 id="quotation-title">Tell us what you are looking for</h2>
+          <p>
+            Provide the details below to prepare an inquiry message. You can review it in
+            WhatsApp before choosing whether to send it.
+          </p>
+          <div class="quote-honesty">
+            <strong>How this form works</strong>
+            This standalone website does not send or store form submissions. Selecting the
+            button prepares a message in WhatsApp using the listed phone number.
+          </div>
+        </div>
+
+        <form class="quote-form" id="quote-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+              <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="organization">Organization or business name <span aria-hidden="true">*</span></label>
+              <input id="organization" name="organization" type="text" autocomplete="organization" required>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email address <span class="optional">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email">
+            </div>
+
+            <div class="form-field">
+              <label for="category">Product category <span aria-hidden="true">*</span></label>
+              <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option>Pharmaceutical Products</option>
+                <option>Medical Equipment</option>
+                <option>Medical Supplies</option>
+                <option>Other / Not sure</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="quantity">Quantity <span class="optional">(if known)</span></label>
+              <input id="quantity" name="quantity" type="text" inputmode="decimal" placeholder="e.g. 20 units">
+            </div>
+
+            <div class="form-field full">
+              <label for="product">Product or equipment requested <span aria-hidden="true">*</span></label>
+              <input id="product" name="product" type="text" required placeholder="Describe the product you are asking about">
+            </div>
+
+            <div class="form-field full">
+              <label for="message">Additional message <span class="optional">(optional)</span></label>
+              <textarea id="message" name="message" placeholder="Add any details that may help explain your request"></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit-row">
+            <button class="button button-primary" type="submit">
+              Prepare WhatsApp Inquiry
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </button>
+            <p class="form-hint">Your message opens in WhatsApp for you to review and send.</p>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-details">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Speak with Sunsel Pharma</h2>
+          <p>For product information, supply questions, and quotation inquiries, contact the company directly.</p>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6.5 3.5h3l1.5 4-2 1.6a15 15 0 0 0 5.9 5.9l1.6-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+251944808141">+251 944 808 141</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z"></path>
+                  <circle cx="12" cy="9" r="2.2"></circle>
+                </svg>
+              </span>
+              <div>
+                <strong>Office location</strong>
+                <span>Merkato, Sebategna, Addis Ababa, Ethiopia</span>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3.5 2"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Email</strong>
+                <span>Contact us by phone to request our official email address.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-actions">
+            <a class="button button-primary" href="tel:+251944808141">Call the listed number</a>
+            <a
+              class="button button-secondary"
+              href="https://wa.me/251944808141"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact Sunsel Pharma on WhatsApp"
+            >WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="map-panel" role="img" aria-label="Illustrative city image for the general Merkato and Sebategna area in Addis Ababa">
+          <div class="map-card">
+            <h3>Merkato · Sebategna</h3>
+            <p>
+              This link shows the general area only. The company's exact street address and
+              building location have not been verified.
+            </p>
+            <a
+              class="text-link"
+              href="https://www.google.com/maps/search/?api=1&query=Merkato%2C+Sebategna%2C+Addis+Ababa%2C+Ethiopia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View general area on Google Maps
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 4h6v6M20 4l-9 9"></path>
+                <path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="Sunsel Pharma PLC home">
+            <span class="brand-mark" aria-hidden="true">SP</span>
+            <span class="brand-copy">
+              <strong>SUNSEL PHARMA PLC</strong>
+              <span>Pharmaceutical supply</span>
+            </span>
+          </a>
+          <p>
+            Pharmaceutical and medical-equipment importing and wholesale business based in
+            Addis Ababa, Ethiopia.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick links</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#quotation">Request a Quotation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <div class="footer-contact">
+            <a href="tel:+251944808141">+251 944 808 141</a>
+            <span>Merkato, Sebategna, Addis Ababa, Ethiopia, DERA Building</span>
+            <span>Email address to be supplied and verified by the company.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Sunsel Pharma PLC. All rights reserved.</p>
+        <p>Temporary text-based brand mark; not the official company logo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      Company details kept in one place for easier review and future updates.
+      Confirm the listed phone number and replace the blank email only after
+      the company verifies its official contact details.
+    */
+    const SUNSEL_CONFIG = {
+      phoneDisplay: "+251 944 808 141",
+      phoneInternational: "251944808141",
+      officialEmail: "",
+      mission: "",
+      vision: ""
+    };
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-navigation");
+
+    function closeMenu() {
+      navigation.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      navigation.classList.toggle("is-open", !isOpen);
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    // Management-approved text can be entered in SUNSEL_CONFIG above.
+    if (SUNSEL_CONFIG.mission.trim()) {
+      document.querySelector("#mission-text").textContent = SUNSEL_CONFIG.mission;
+    }
+    if (SUNSEL_CONFIG.vision.trim()) {
+      document.querySelector("#vision-text").textContent = SUNSEL_CONFIG.vision;
+    }
+
+    // Update the footer year automatically.
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+
+    // Product-category buttons send visitors to the form and preselect a category.
+    const categorySelect = document.querySelector("#category");
+    document.querySelectorAll(".category-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        categorySelect.value = button.dataset.category;
+        document.querySelector("#quotation").scrollIntoView({ behavior: "smooth" });
+        window.setTimeout(() => document.querySelector("#product").focus(), 350);
+      });
+    });
+
+    // The form prepares a WhatsApp message; it does not submit or store data on a server.
+    const quoteForm = document.querySelector("#quote-form");
+    const formStatus = document.querySelector("#form-status");
+
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!quoteForm.reportValidity()) {
+        formStatus.textContent = "Please complete the required fields before continuing.";
+        return;
+      }
+
+      const formData = new FormData(quoteForm);
+      const values = {
+        fullName: String(formData.get("fullName") || "").trim(),
+        organization: String(formData.get("organization") || "").trim(),
+        phone: String(formData.get("phone") || "").trim(),
+        email: String(formData.get("email") || "").trim(),
+        category: String(formData.get("category") || "").trim(),
+        product: String(formData.get("product") || "").trim(),
+        quantity: String(formData.get("quantity") || "").trim(),
+        message: String(formData.get("message") || "").trim()
+      };
+
+      const messageLines = [
+        "Sunsel Pharma PLC — Business Inquiry",
+        "",
+        `Name: ${values.fullName}`,
+        `Organization: ${values.organization}`,
+        `Phone: ${values.phone}`,
+        `Email: ${values.email || "Not provided"}`,
+        `Product category: ${values.category}`,
+        `Product/equipment requested: ${values.product}`,
+        `Quantity: ${values.quantity || "Not specified"}`,
+        `Additional message: ${values.message || "None"}`
+      ];
+
+      const whatsappUrl =
+        `https://wa.me/${SUNSEL_CONFIG.phoneInternational}?text=${encodeURIComponent(messageLines.join("\n"))}`;
+
+      formStatus.textContent = "Opening WhatsApp with your inquiry. Review the message there before sending.";
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+  </script>
+</body>
+</html>
